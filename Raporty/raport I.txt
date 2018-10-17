@@ -1,0 +1,2 @@
+1. Zapozna³em siê z informacjami dotycz¹cymi ³¹czenia baz danych z jêzykiem C++. Przegl¹da³em, ró¿ne materia³y, Ÿród³a informacji naœwietlaj¹ce mi jak ma to wszystko dzia³aæ. 
+2. W nastepnym raporcie zmaierzam, spróbowaæ po³¹czyæ moj¹ bazê danych z fragmentem kodu, sprawdziæ jak to dzia³a w praktyce. 
