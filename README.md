@@ -1,5 +1,15 @@
 # Biblioteka "KEDAR"
-<p> Projekt będie dotyczył systemu zarządzania treściami związanym z biblioteką. </p>
+<p> Projekt będzie dotyczył systemu zarządzania treściami związanym z biblioteką. </p>
+
+<strong> Funkcjonalność: </strong>
+<ul>
+  <li> dodawanie książi </li>
+  <li> usuwanie książki </li>
+  <li> szukanie książki</li>
+  <li> lista książek </li>
+  <li> edytowanie wybranej ksiązki </li>
+  <li> lista książek </li>
+</ul>
 
 <strong> Użyte technologie: </strong>
 <ul>
