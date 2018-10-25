@@ -1,2 +1,9 @@
-# Projekt nie ma ustalonej jeszcze konkretnej nazwy, w niedługiej przyszłości powinna się pojawić 
-<p> Projekt będzie dotyczył systemu rejestracji/wynajmu czegoś. Połączone wszystko będzie z bazą danych. Mam nadzieję, że będzie to działało w przyszłości. :) </p>
+# Biblioteka "KEDAR"
+<p> Projekt będie dotyczył systemu zarządzania treściami związanym z biblioteką. </p>
+
+<strong> Użyte technologie: </strong>
+<ul>
+  <li> QtCreator </li>
+  <li> Baza danych SQLite </li>
+  <li> język programowania C++ </li>
+ </ul>
