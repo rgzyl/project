@@ -1,5 +1,0 @@
-Raport III
-Ten raport jest najwa¿niejszym raportem do tej pory.
-W folderze projekty pojawi³y siê pliki z kodem oraz plik z baz¹ danch. 
-W plikach z kodem zosta³o zrealizowanie po³¹czenie jêzyka C++ z ba¿¹ danych SQLite. 
-Plik bazy danych zosta³ przygotowany w pe³ni, wszystkie relacje, klucze podstawowe zosta³y po³¹czone ze sob¹.
