@@ -1,10 +1,10 @@
-#include "ksiazki.h"
-#include "ui_ksiazki.h"
+#include "czytelnicy.h"
+#include "ui_czytelnicy.h"
 #include "QMessageBox"
 
-Ksiazki::Ksiazki(QWidget *parent) :
+Czytelnicy::Czytelnicy(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Ksiazki)
+    ui(new Ui::Czytelnicy)
 {
     ui->setupUi(this);
 
@@ -12,26 +12,28 @@ Ksiazki::Ksiazki(QWidget *parent) :
     Login connect;
 
     if(!connect.connectOpen())
-        ui->label_second->setText("Wstąpił nieoczekiwany problem z odtworzeniem bazy danych");
+        ui->label_third->setText("Wstąpił nieoczekiwany problem z odtworzeniem bazy danych");
     else
-        ui->label_second->setText("Wykryto aktywną bazę danych");
+        ui->label_third->setText("Wykryto aktywną bazę danych");
 }
 
-Ksiazki::~Ksiazki()
+Czytelnicy::~Czytelnicy()
 {
     delete ui;
 }
 
 /*Funkcja przycisku do zapisywania rekordu*/
-void Ksiazki::on_pushButton_clicked()
+void Czytelnicy::on_pushButton_clicked()
 {
     Login connect;
-    QString id,title,author,release_date,book_genre;
+    QString id,name,phone,mail,post_code,city,street;
     id=ui->lineEdit_ID->text();
-    title=ui->lineEdit_title->text();
-    author=ui->lineEdit_author->text();
-    release_date=ui->lineEdit_release_date->text();
-    book_genre=ui->lineEdit_book_genre->text();
+    name=ui->lineEdit_name->text();
+    phone=ui->lineEdit_phone->text();
+    mail=ui->lineEdit_mail->text();
+    post_code=ui->lineEdit_post_code->text();
+    city=ui->lineEdit_city->text();
+    street=ui->lineEdit_street->text();
 
     if(!connect.connectOpen())
     {
@@ -41,7 +43,7 @@ void Ksiazki::on_pushButton_clicked()
 
     connect.connectOpen();
     QSqlQuery start;
-    start.prepare("insert into Ksiazki (Id,Tytul,Autor,RokWydania,Gatunek) values ('"+id+"','"+title+"','"+author+"','"+release_date+"','"+book_genre+"')");
+    start.prepare("insert into Czytelnik (ID,Personalia,Telefon,Email,KodPocztowy,Miejscowosc,Adres) values ('"+id+"','"+name+"','"+phone+"','"+mail+"','"+post_code+"','"+city+"','"+street+"')");
 
     if(start.exec())
     {
@@ -55,15 +57,17 @@ void Ksiazki::on_pushButton_clicked()
 }
 
 /*Funkcja przycisku do edytowania rekordu*/
-void Ksiazki::on_pushButton_2_clicked()
+void Czytelnicy::on_pushButton_2_clicked()
 {
     Login connect;
-    QString id,title,author,release_date,book_genre;
+    QString id,name,phone,mail,post_code,city,street;
     id=ui->lineEdit_ID->text();
-    title=ui->lineEdit_title->text();
-    author=ui->lineEdit_author->text();
-    release_date=ui->lineEdit_release_date->text();
-    book_genre=ui->lineEdit_book_genre->text();
+    name=ui->lineEdit_name->text();
+    phone=ui->lineEdit_phone->text();
+    mail=ui->lineEdit_mail->text();
+    post_code=ui->lineEdit_post_code->text();
+    city=ui->lineEdit_city->text();
+    street=ui->lineEdit_street->text();
 
     if(!connect.connectOpen())
     {
@@ -73,7 +77,7 @@ void Ksiazki::on_pushButton_2_clicked()
 
     connect.connectOpen();
     QSqlQuery start;
-    start.prepare("update Ksiazki set ID='"+id+"', Tytul='"+title+"',Autor='"+author+"',RokWydania='"+release_date+"',Gatunek='"+book_genre+"' where ID='"+id+"'" );
+    start.prepare("update Czytelnik set ID='"+id+"', Personalia='"+name+"',Telefon='"+phone+"',Email='"+mail+"',KodPocztowy='"+post_code+"',Miejscowosc='"+city+"',Adres='"+street+"' where ID='"+id+"'" );
 
     if(start.exec())
     {
@@ -87,15 +91,17 @@ void Ksiazki::on_pushButton_2_clicked()
 }
 
 /*Funckja przycisku do usuwanania rekordu*/
-void Ksiazki::on_pushButton_3_clicked()
+void Czytelnicy::on_pushButton_3_clicked()
 {
     Login connect;
-    QString id,title,author,release_date,book_genre;
+    QString id,name,phone,mail,post_code,city,street;
     id=ui->lineEdit_ID->text();
-    title=ui->lineEdit_title->text();
-    author=ui->lineEdit_author->text();
-    release_date=ui->lineEdit_release_date->text();
-    book_genre=ui->lineEdit_book_genre->text();
+    name=ui->lineEdit_name->text();
+    phone=ui->lineEdit_phone->text();
+    mail=ui->lineEdit_mail->text();
+    post_code=ui->lineEdit_post_code->text();
+    city=ui->lineEdit_city->text();
+    street=ui->lineEdit_street->text();
 
     if(!connect.connectOpen())
     {
@@ -105,7 +111,7 @@ void Ksiazki::on_pushButton_3_clicked()
 
     connect.connectOpen();
     QSqlQuery start;
-    start.prepare("delete from Ksiazki where ID='"+id+"'");
+    start.prepare("delete from Czytelnik where ID='"+id+"'");
 
     if(start.exec())
     {
@@ -119,7 +125,7 @@ void Ksiazki::on_pushButton_3_clicked()
 }
 
 /*Przycisk służący do załadowania tabeli do tableView*/
-void Ksiazki::on_pushButton_4_clicked()
+void Czytelnicy::on_pushButton_4_clicked()
 {
     Login connect;
     QSqlQueryModel * model=new QSqlQueryModel();
@@ -127,7 +133,7 @@ void Ksiazki::on_pushButton_4_clicked()
     connect.connectOpen();
     QSqlQuery* start=new QSqlQuery(connect.kedar);
 
-    start->prepare("select * from Ksiazki");
+    start->prepare("select * from Czytelnik");
 
     start->exec();
     model->setQuery(*start);
@@ -135,10 +141,11 @@ void Ksiazki::on_pushButton_4_clicked()
 
     connect.connectClose();
     qDebug()<<(model->rowCount());
+
 }
 
 /*Przypisywanie odpowiednim pól wartości z TableView*/
-void Ksiazki::on_tableView_activated(const QModelIndex &index)
+void Czytelnicy::on_tableView_activated(const QModelIndex &index)
 {
     QString val=ui->tableView->model()->data(index).toString();
 
@@ -151,17 +158,19 @@ void Ksiazki::on_tableView_activated(const QModelIndex &index)
 
     connect.connectOpen();
     QSqlQuery start;
-    start.prepare("select * from Ksiazki where ID='"+val+"' or Tytul='"+val+"' or Autor='"+val+"' or RokWydania='"+val+"' or Gatunek='"+val+"'");
+    start.prepare("select * from Czytelnik where ID='"+val+"' or Personalia='"+val+"' or Telefon='"+val+"' or Email='"+val+"' or KodPocztowy='"+val+"' or Miejscowosc='"+val+"' or Adres='"+val+"'");
 
     if(start.exec())
     {
         while (start.next())
         {
             ui->lineEdit_ID->setText(start.value(0).toString());
-            ui->lineEdit_title->setText(start.value(1).toString());
-            ui->lineEdit_author->setText(start.value(2).toString());
-            ui->lineEdit_release_date->setText(start.value(3).toString());
-            ui->lineEdit_book_genre->setText(start.value(4).toString());
+            ui->lineEdit_name->setText(start.value(1).toString());
+            ui->lineEdit_phone->setText(start.value(2).toString());
+            ui->lineEdit_mail->setText(start.value(3).toString());
+            ui->lineEdit_post_code->setText(start.value(4).toString());
+            ui->lineEdit_city->setText(start.value(5).toString());
+            ui->lineEdit_street->setText(start.value(6).toString());
         }
         connect.connectClose();
     }

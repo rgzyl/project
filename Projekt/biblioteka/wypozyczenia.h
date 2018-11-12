@@ -1,20 +1,20 @@
-#ifndef KSIAZKI_H
-#define KSIAZKI_H
+#ifndef WYPOZYCZENIA_H
+#define WYPOZYCZENIA_H
 
 #include <QDialog>
 #include "login.h"
 
 namespace Ui {
-class Ksiazki;
+class Wypozyczenia;
 }
 
-class Ksiazki : public QDialog
+class Wypozyczenia : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit Ksiazki(QWidget *parent = nullptr);
-    ~Ksiazki();
+    explicit Wypozyczenia(QWidget *parent = nullptr);
+    ~Wypozyczenia();
 
 private slots:
     void on_pushButton_clicked();
@@ -28,7 +28,7 @@ private slots:
     void on_tableView_activated(const QModelIndex &index);
 
 private:
-    Ui::Ksiazki *ui;
+    Ui::Wypozyczenia *ui;
 };
 
-#endif // KSIAZKI_H
+#endif // WYPOZYCZENIA_H

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Ksiazki</class>
- <widget class="QDialog" name="Ksiazki">
+ <class>Czytelnicy</class>
+ <widget class="QDialog" name="Czytelnicy">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>976</width>
-    <height>381</height>
+    <width>1159</width>
+    <height>459</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label_second">
+  <widget class="QLabel" name="label_third">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>350</y>
-     <width>341</width>
+     <y>430</y>
+     <width>311</width>
      <height>20</height>
     </rect>
    </property>
@@ -34,8 +34,8 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>120</y>
+     <x>310</x>
+     <y>160</y>
      <width>93</width>
      <height>30</height>
     </rect>
@@ -53,8 +53,8 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>160</y>
+     <x>310</x>
+     <y>200</y>
      <width>93</width>
      <height>30</height>
     </rect>
@@ -72,8 +72,8 @@
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>200</y>
+     <x>310</x>
+     <y>240</y>
      <width>93</width>
      <height>30</height>
     </rect>
@@ -91,18 +91,18 @@
   <widget class="QTableView" name="tableView">
    <property name="geometry">
     <rect>
-     <x>410</x>
+     <x>420</x>
      <y>80</y>
-     <width>541</width>
-     <height>191</height>
+     <width>721</width>
+     <height>271</height>
     </rect>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>280</y>
+     <x>730</x>
+     <y>360</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -117,12 +117,145 @@
     <string>Załaduj tabelę</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QLineEdit" name="lineEdit_ID">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>79</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>1</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_name">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>120</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Jan Abacki</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_phone">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>160</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>723654500</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_mail">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>200</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>jan.abacki@onet.pl</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_post_code">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>240</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>58-150</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_city">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>280</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Strzegom</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_street">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>320</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Pomorska 121/11</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>80</y>
-     <width>153</width>
+     <y>79</y>
+     <width>21</width>
      <height>31</height>
     </rect>
    </property>
@@ -136,12 +269,12 @@
     <string>ID</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>40</x>
      <y>120</y>
-     <width>169</width>
+     <width>81</width>
      <height>31</height>
     </rect>
    </property>
@@ -152,15 +285,15 @@
     </font>
    </property>
    <property name="text">
-    <string>Tytuł</string>
+    <string> Personalia</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
      <x>60</x>
      <y>160</y>
-     <width>71</width>
+     <width>51</width>
      <height>31</height>
     </rect>
    </property>
@@ -171,16 +304,16 @@
     </font>
    </property>
    <property name="text">
-    <string> Autor</string>
+    <string>Telefon</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>80</x>
      <y>200</y>
-     <width>81</width>
-     <height>35</height>
+     <width>31</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -190,71 +323,71 @@
     </font>
    </property>
    <property name="text">
-    <string>Gatunek</string>
+    <string>Mail</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_title">
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>120</y>
-     <width>175</width>
-     <height>30</height>
+     <x>20</x>
+     <y>240</y>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Calibri</family>
-     <pointsize>10</pointsize>
+     <family>Corbel</family>
+     <pointsize>11</pointsize>
     </font>
    </property>
-   <property name="placeholderText">
-    <string>Rota</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_author">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>160</y>
-     <width>175</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Calibri</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="placeholderText">
-    <string>Maria Konopnicka</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_book_genre">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>200</y>
-     <width>175</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Calibri</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="placeholderText">
-    <string>hymn</string>
+   <property name="text">
+    <string>Kod pocztowy</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>400</x>
-     <y>20</y>
+     <x>30</x>
+     <y>279</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Miejscowość</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>319</y>
+     <width>51</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Adres</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>30</y>
      <width>211</width>
      <height>31</height>
     </rect>
@@ -277,82 +410,15 @@
     <string>Biblioteka &quot;KEDAR&quot;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>240</y>
-     <width>259</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Corbel</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Rok wydania</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_ID">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>80</y>
-     <width>175</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Calibri</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="toolTip">
-    <string/>
-   </property>
-   <property name="accessibleName">
-    <string/>
-   </property>
-   <property name="accessibleDescription">
-    <string/>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="placeholderText">
-    <string>1</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_release_date">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>240</y>
-     <width>175</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Calibri</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="placeholderText">
-    <string>1908</string>
-   </property>
-  </widget>
  </widget>
  <tabstops>
   <tabstop>lineEdit_ID</tabstop>
-  <tabstop>lineEdit_title</tabstop>
-  <tabstop>lineEdit_author</tabstop>
-  <tabstop>lineEdit_book_genre</tabstop>
-  <tabstop>lineEdit_release_date</tabstop>
+  <tabstop>lineEdit_name</tabstop>
+  <tabstop>lineEdit_phone</tabstop>
+  <tabstop>lineEdit_mail</tabstop>
+  <tabstop>lineEdit_post_code</tabstop>
+  <tabstop>lineEdit_city</tabstop>
+  <tabstop>lineEdit_street</tabstop>
   <tabstop>pushButton</tabstop>
   <tabstop>pushButton_2</tabstop>
   <tabstop>pushButton_3</tabstop>

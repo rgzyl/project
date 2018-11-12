@@ -5,7 +5,7 @@
 #include <QtSql>
 #include <QDebug>
 #include <QFileInfo>
-#include <ksiazki.h>
+#include <menu.h>
 
 namespace Ui {
 class Login;
@@ -27,7 +27,7 @@ public:
     bool connectOpen()
     {
         kedar=QSqlDatabase::addDatabase("QSQLITE");
-        kedar.setDatabaseName("C:/Users/Radek/Desktop/projekt/kedar.db");
+        kedar.setDatabaseName("C:/Users/Admin/Desktop/projekt/kedar.db");
 
         if(!kedar.open())
         {

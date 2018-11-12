@@ -27,15 +27,24 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         login.cpp \
-    ksiazki.cpp
+    ksiazki.cpp \
+    menu.cpp \
+    czytelnicy.cpp \
+    wypozyczenia.cpp
 
 HEADERS += \
         login.h \
-    ksiazki.h
+    ksiazki.h \
+    menu.h \
+    czytelnicy.h \
+    wypozyczenia.h
 
 FORMS += \
         login.ui \
-    ksiazki.ui
+    ksiazki.ui \
+    menu.ui \
+    czytelnicy.ui \
+    wypozyczenia.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Ksiazki</class>
- <widget class="QDialog" name="Ksiazki">
+ <class>Wypozyczenia</class>
+ <widget class="QDialog" name="Wypozyczenia">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>976</width>
-    <height>381</height>
+    <width>1043</width>
+    <height>425</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label_second">
+  <widget class="QLabel" name="label_first">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>350</y>
-     <width>341</width>
+     <y>393</y>
+     <width>771</width>
      <height>20</height>
     </rect>
    </property>
@@ -31,11 +31,21 @@
     <string>Status</string>
    </property>
   </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>90</y>
+     <width>621</width>
+     <height>231</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>120</y>
+     <x>290</x>
+     <y>150</y>
      <width>93</width>
      <height>30</height>
     </rect>
@@ -53,8 +63,8 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>160</y>
+     <x>290</x>
+     <y>190</y>
      <width>93</width>
      <height>30</height>
     </rect>
@@ -72,8 +82,8 @@
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>200</y>
+     <x>290</x>
+     <y>230</y>
      <width>93</width>
      <height>30</height>
     </rect>
@@ -88,21 +98,11 @@
     <string>Usuń</string>
    </property>
   </widget>
-  <widget class="QTableView" name="tableView">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>80</y>
-     <width>541</width>
-     <height>191</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>280</y>
+     <x>660</x>
+     <y>330</y>
      <width>111</width>
      <height>41</height>
     </rect>
@@ -117,12 +117,34 @@
     <string>Załaduj tabelę</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QComboBox" name="comboBox_3">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>80</y>
-     <width>153</width>
+     <x>100</x>
+     <y>210</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>90</y>
+     <width>169</width>
      <height>31</height>
     </rect>
    </property>
@@ -133,15 +155,87 @@
     </font>
    </property>
    <property name="text">
-    <string>ID</string>
+    <string> ID</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QComboBox" name="comboBox_2">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>120</y>
-     <width>169</width>
+     <x>100</x>
+     <y>130</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+   <property name="currentIndex">
+    <number>-1</number>
+   </property>
+   <property name="duplicatesEnabled">
+    <bool>true</bool>
+   </property>
+   <property name="modelColumn">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>28</x>
+     <y>130</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Personalia</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>170</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>58</x>
+     <y>170</y>
+     <width>171</width>
      <height>31</height>
     </rect>
    </property>
@@ -155,11 +249,84 @@
     <string>Tytuł</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>210</y>
+     <width>51</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Status</string>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>250</y>
+     <width>175</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Calibri</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="wrapping">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="correctionMode">
+    <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+   </property>
+   <property name="calendarPopup">
+    <bool>true</bool>
+   </property>
+   <property name="date">
+    <date>
+     <year>2018</year>
+     <month>11</month>
+     <day>1</day>
+    </date>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>160</y>
+     <y>250</y>
+     <width>169</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Data</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>290</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -171,33 +338,14 @@
     </font>
    </property>
    <property name="text">
-    <string> Autor</string>
+    <string>Komentarz</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLineEdit" name="lineEdit_comment">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>200</y>
-     <width>81</width>
-     <height>35</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Corbel</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Gatunek</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_title">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>120</y>
+     <x>100</x>
+     <y>290</y>
      <width>175</width>
      <height>30</height>
     </rect>
@@ -209,52 +357,14 @@
     </font>
    </property>
    <property name="placeholderText">
-    <string>Rota</string>
+    <string>Brak</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_author">
+  <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>160</y>
-     <width>175</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Calibri</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="placeholderText">
-    <string>Maria Konopnicka</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_book_genre">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>200</y>
-     <width>175</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Calibri</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="placeholderText">
-    <string>hymn</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_6">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>20</y>
+     <x>440</x>
+     <y>30</y>
      <width>211</width>
      <height>31</height>
     </rect>
@@ -277,30 +387,11 @@
     <string>Biblioteka &quot;KEDAR&quot;</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>240</y>
-     <width>259</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Corbel</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Rok wydania</string>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="lineEdit_ID">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>80</y>
+     <x>100</x>
+     <y>90</y>
      <width>175</width>
      <height>30</height>
     </rect>
@@ -310,49 +401,19 @@
      <family>Calibri</family>
      <pointsize>10</pointsize>
     </font>
-   </property>
-   <property name="toolTip">
-    <string/>
-   </property>
-   <property name="accessibleName">
-    <string/>
-   </property>
-   <property name="accessibleDescription">
-    <string/>
-   </property>
-   <property name="text">
-    <string/>
    </property>
    <property name="placeholderText">
     <string>1</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_release_date">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>240</y>
-     <width>175</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Calibri</family>
-     <pointsize>10</pointsize>
-    </font>
-   </property>
-   <property name="placeholderText">
-    <string>1908</string>
-   </property>
-  </widget>
  </widget>
  <tabstops>
   <tabstop>lineEdit_ID</tabstop>
-  <tabstop>lineEdit_title</tabstop>
-  <tabstop>lineEdit_author</tabstop>
-  <tabstop>lineEdit_book_genre</tabstop>
-  <tabstop>lineEdit_release_date</tabstop>
+  <tabstop>comboBox_2</tabstop>
+  <tabstop>comboBox</tabstop>
+  <tabstop>comboBox_3</tabstop>
+  <tabstop>dateEdit</tabstop>
+  <tabstop>lineEdit_comment</tabstop>
   <tabstop>pushButton</tabstop>
   <tabstop>pushButton_2</tabstop>
   <tabstop>pushButton_3</tabstop>
